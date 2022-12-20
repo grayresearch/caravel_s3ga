@@ -1,0 +1,3 @@
+[submodule "verilog/rtl/s3ga"]
+	path = verilog/rtl/s3ga
+	url = https://github.com/grayresearch/s3ga.git
