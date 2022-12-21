@@ -46,7 +46,7 @@ set ::env(CLOCK_PERIOD) "10"
 ## Internal Macros
 ### Macro PDN Connections
 set ::env(FP_PDN_MACRO_HOOKS) "\
-	mprj vccd1 vssd1 vccd1 vssd1"
+	proj vccd1 vssd1 vccd1 vssd1"
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
@@ -54,13 +54,15 @@ set ::env(MACRO_PLACEMENT_CFG) $script_dir/macro.cfg
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/user_proj_example.v"
+	$script_dir/../../verilog/rtl/s3ga/src/s3ga.h \
+	$script_dir/../../verilog/rtl/s3ga/src/s3ga_proj.v \
+	$script_dir/../../verilog/rtl/s3ga/src/s3ga.v"
 
 set ::env(EXTRA_LEFS) "\
-	$script_dir/../../lef/user_proj_example.lef"
+	$script_dir/../../lef/s3ga_proj.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$script_dir/../../gds/user_proj_example.gds"
+	$script_dir/../../gds/s3ga_proj.gds"
 
 # set ::env(GLB_RT_MAXLAYER) 5
 set ::env(RT_MAX_LAYER) {met4}
