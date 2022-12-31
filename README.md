@@ -1,12 +1,22 @@
-# Caravel User Project
+# S3GA
+By Jan Gray. Copyright (C) 2022, Gray Research LLC.
+Licensed under the Apache License, Version 2.0.
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![UPRJ_CI](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml) [![Caravel Build](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml)
+[S3GA](https://fpga.org/2022/11/30/s3ga-part-1-beginnings/)
+is a *Simple Scalable Serial field programmable Gate Array* fabric targeting the
+[caravel_user_project](https://github.com/efabless/caravel_user_project)
+of [efabless](https://efabless.com)
+[MPW-8](https://platform.efabless.com/shuttles/MPW-8) Open MPW shuttle.
 
-| :exclamation: Important Note            |
-|-----------------------------------------|
+This serial FPGA evaluates N logical LUTs using N/M real LUTs,
+over M cycles.  Thus it trades off latency (logical clock period)
+for greater capacity by amortizing the gate and wiring area of
+lookup table input and output multiplexers (muxes) and
+routing switches.
 
-## Please fill in your project documentation in this README.md file 
+It provides a pipelined, hierarchical (recursive B=4-way cluster
+partitions) fat-tree interconnect, routing serial input and output nets
+amongst logic blocks and IOs, enabling a simple place and route using
+recursive min-cut 4-partitions of the input netlist hypergraph.
 
-Refer to [README](docs/source/index.rst#section-quickstart) for a quickstart of how to use caravel_user_project
-
-Refer to [README](docs/source/index.rst) for this sample project documentation. 
+...

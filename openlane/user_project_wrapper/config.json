@@ -1,14 +1,21 @@
 {
     "DESIGN_NAME": "user_project_wrapper",
-    "VERILOG_FILES": ["dir::../../verilog/rtl/defines.v", "dir::../../verilog/rtl/user_project_wrapper.v"],
-    "CLOCK_PERIOD": 10,
-    "CLOCK_PORT": "user_clock2",
-    "CLOCK_NET": "mprj.clk",
-    "FP_PDN_MACRO_HOOKS": "mprj vccd1 vssd1 vccd1 vssd1",
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../verilog/rtl/user_project_wrapper.v"
+    ],
+    "CLOCK_PERIOD": 8,
+    "CLOCK_PORT": "wb_clk_i",
+    "CLOCK_NET": "clk",
+    "FP_PDN_MACRO_HOOKS": "proj vccd1 vssd1 vccd1 vssd1",
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
-    "VERILOG_FILES_BLACKBOX": ["dir::../../verilog/rtl/defines.v", "dir::../../verilog/rtl/user_proj_example.v"],
-    "EXTRA_LEFS": "dir::../../lef/user_proj_example.lef",
-    "EXTRA_GDS_FILES": "dir::../../gds/user_proj_example.gds",
+    "VERILOG_FILES_BLACKBOX": [
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../verilog/rtl/s3ga/src/s3ga_proj.v",
+        "dir::../../verilog/rtl/s3ga/src/s3ga.v"
+    ],
+    "EXTRA_LEFS": "dir::../../lef/s3ga_proj.lef",
+    "EXTRA_GDS_FILES": "dir::../../gds/s3ga_proj.gds",
     "FP_PDN_CHECK_NODES": 0,
     "SYNTH_ELABORATE_ONLY": 1,
     "PL_RANDOM_GLB_PLACEMENT": 1,
