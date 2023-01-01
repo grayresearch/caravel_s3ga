@@ -1,0 +1,54 @@
+{
+    "DESIGN_NAME": "x64",
+    "DESIGN_IS_CORE": 0,
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/defines.v",
+        "dir::../../verilog/rtl/s3ga/src/s3ga_proj.v",
+        "dir::../../verilog/rtl/s3ga/src/s3ga.v",
+        "dir::../../verilog/rtl/s3ga/src/macros.v"
+    ],
+    "CLOCK_PERIOD": 7,
+    "CLOCK_PORT": "clk",
+    "CLOCK_NET": "clk",
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 600 400",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+    "PL_BASIC_PLACEMENT": 0,
+    "PL_TARGET_DENSITY": 0.7,
+    "GPL_CELL_PADDING": 0,
+    "DPL_CELL_PADDING": 0,
+    "PL_RESIZER_HOLD_MAX_BUFFER_PERCENT": 100,
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 0.4,
+    "ROUTING_CORES": 8,
+    "VDD_NETS": ["vccd1"],
+    "GND_NETS": ["vssd1"],
+    "DIODE_INSERTION_STRATEGY": 4,
+    "RUN_CVC": 1,
+    "pdk::sky130*": {
+        "RT_MAX_LAYER": "met4",
+        "scl::sky130_fd_sc_hd": {
+            "X_CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "pdk::gf180mcuC": {
+        "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+        "CLOCK_PERIOD": 24.0,
+        "FP_CORE_UTIL": 40,
+        "RT_MAX_LAYER": "Metal4",
+        "SYNTH_MAX_FANOUT": 4,
+        "PL_TARGET_DENSITY": 0.45
+    }
+}
